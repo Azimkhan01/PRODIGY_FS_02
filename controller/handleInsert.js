@@ -4,7 +4,7 @@ const handleInsert = (req,res)=>{
     let {name,email,phone,joinDate,dob,salary,address,branch} = req.body
     if(name,email,phone,joinDate,dob,salary,address,branch)
     {
-        const insert = Employee.create({name,email,phone,joinDate,dob,salary,address,branch});
+        const insert = Employee.create({name,email,phone,joinDate:joinDate,dob,salary,address,branch});
         if(insert)
         {
             res.render("insert",{

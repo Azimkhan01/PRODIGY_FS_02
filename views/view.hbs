@@ -27,51 +27,10 @@
             </tbody>
         </table>
     </div>
-
-    <script>
+   {{!-- <p id="hero"></p> --}}
+    <script src="/public/js/view.js">
         // Example data
-        const employees = [
-            {
-                name: "John Doe",
-                email: "john.doe@example.com",
-                phone: "+1234567890",
-                joinDate: "2023-01-15",
-                dob: "1990-05-24",
-                salary: "50000",
-                address: "123 Main St, Anytown, USA",
-                branch: "Sales"
-            },
-            {
-                name: "Jane Smith",
-                email: "jane.smith@example.com",
-                phone: "+0987654321",
-                joinDate: "2023-02-20",
-                dob: "1985-08-30",
-                salary: "55000",
-                address: "456 Elm St, Othertown, USA",
-                branch: "Marketing"
-            }
-        ];
-
-        function renderTable() {
-            const tbody = document.getElementById('employee-table-body');
-            tbody.innerHTML = ''; // Clear existing rows
-
-            employees.forEach(employee => {
-                const row = document.createElement('tr');
-
-                for (const key in employee) {
-                    const cell = document.createElement('td');
-                    cell.textContent = employee[key];
-                    row.appendChild(cell);
-                }
-
-                tbody.appendChild(row);
-            });
-        }
-
-        // Render the table on page load
-        renderTable();
+       
     </script>
 </body>
 </html>
