@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Remove Employee</title>
+    <link rel="stylesheet" href="/public/css/remove.css"> <!-- Link to external CSS -->
 </head>
 <body>
-    <h1>this is remove</h1>
+    <div class="form-container">
+        <h2>Remove Employee</h2>
+        <form action="/remove" method="post">
+            <label for="employeeId">Employee ID:</label>
+            <input type="text" id="id" name="id" value="" required>
+            <p >{{status}}</p>
+            <p id="status"></p>
+            <div id="search" style="background-color: white;padding-bottom:25px">
+            <h style="background-color: rgb(50, 50, 187);padding:10px;border-radius:2px;color:white" id="searchbtn" >Search</h></div>
+            <button type="submit" id="submit">Remove</button>
+             <div style="margin-top: 15px;"><a href="/dashboard" style="color: white;background-color:#007BFF;padding:5px;text-decoration:none;font-size:16px;text-align:center">Back to Home</a></div>
+        </form>
+    </div>
+    <script src="/public/js/remove.js"></script>
 </body>
 </html>

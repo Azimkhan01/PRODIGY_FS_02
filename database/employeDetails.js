@@ -6,6 +6,10 @@ mongoose.connect(mongoDB).then(()=>{
 });
 
 const EmployeeScehma = new mongoose.Schema({
+    id:{
+type:String,
+trim:true
+    },
 
     name:{
         type:String,
