@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="/public/css/dashboard.css">
 </head>
 <body>
-    <h1>this is employee dashboard</h1>
+    <div class="container">
+        <h1>Employee Management System</h1>
+        <div class="link-container">
+            <a href="/view" onclick="viewEmployee()">View Employee</a>
+            <a href="/insert" onclick="addEmployee()">Add Employee</a>
+            <a href="/remove" onclick="deleteEmployee()">Delete Employee</a>
+            <a href="/update" onclick="updateEmployee()">Update Employee</a>
+        </div>
+    </div>
+
+    <script>
+        function viewEmployee() {
+            alert("View Employee clicked");
+        }
+
+        function addEmployee() {
+            alert("Add Employee clicked");
+        }
+
+        function deleteEmployee() {
+            alert("Delete Employee clicked");
+        }
+
+        function updateEmployee() {
+            alert("Update Employee clicked");
+        }
+    </script>
 </body>
 </html>

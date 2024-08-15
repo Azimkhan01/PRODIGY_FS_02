@@ -11,9 +11,13 @@ if(username.value && password.value)
     document.getElementById("submit").disabled = false;
     document.getElementById("submit").style.background = " #5cb85c";
     
+  }else{
+    document.getElementById("submit").style.background = "red";
+    // document.getElementById("submit").disabled = true;
   }
 }
 else{
     document.getElementById("submit").disabled = true;
+    
 }
 })

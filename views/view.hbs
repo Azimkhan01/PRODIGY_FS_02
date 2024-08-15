@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Employees</title>
+    <link rel="stylesheet" href="/public/css/view.css">
+</head>
+<body>
+    <div class="table-container">
+        <h1>Employee Details</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Joining Date</th>
+                    <th>Date of Birth</th>
+                    <th>Salary</th>
+                    <th>Address</th>
+                    <th>Branch</th>
+                </tr>
+            </thead>
+            <tbody id="employee-table-body">
+                <!-- Table rows will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Example data
+        const employees = [
+            {
+                name: "John Doe",
+                email: "john.doe@example.com",
+                phone: "+1234567890",
+                joinDate: "2023-01-15",
+                dob: "1990-05-24",
+                salary: "50000",
+                address: "123 Main St, Anytown, USA",
+                branch: "Sales"
+            },
+            {
+                name: "Jane Smith",
+                email: "jane.smith@example.com",
+                phone: "+0987654321",
+                joinDate: "2023-02-20",
+                dob: "1985-08-30",
+                salary: "55000",
+                address: "456 Elm St, Othertown, USA",
+                branch: "Marketing"
+            }
+        ];
+
+        function renderTable() {
+            const tbody = document.getElementById('employee-table-body');
+            tbody.innerHTML = ''; // Clear existing rows
+
+            employees.forEach(employee => {
+                const row = document.createElement('tr');
+
+                for (const key in employee) {
+                    const cell = document.createElement('td');
+                    cell.textContent = employee[key];
+                    row.appendChild(cell);
+                }
+
+                tbody.appendChild(row);
+            });
+        }
+
+        // Render the table on page load
+        renderTable();
+    </script>
+</body>
+</html>
